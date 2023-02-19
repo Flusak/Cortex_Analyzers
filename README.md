@@ -1,1 +1,1 @@
-This analyzer uses the site API user-agents.net to display detailed information.
+This analyzer uses the site API https://user-agents.net/ to display detailed information.
