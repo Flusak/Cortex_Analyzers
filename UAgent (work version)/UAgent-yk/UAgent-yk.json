@@ -1,0 +1,10 @@
+{
+    "name": "UAgent-yk",
+    "version": "1.0",
+    "author": "Flusak",
+    "url": "https://github.com/Flusak/Cortex_Analyzers",
+    "license": "AGPL-V3",
+    "description": "Advanced user-agent",
+    "dataTypeList": ["user-agent"],
+    "command": "UAgent-yk/UAgent-yk.py"
+  }
