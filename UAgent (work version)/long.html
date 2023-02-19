@@ -1,0 +1,58 @@
+<div class="panel panel-info" ng-if="success">
+    <div class="panel-heading">
+        Advanced info about <strong>{{(artifact.data || artifact.attachment.name) | fang}}</strong>
+    </div>
+    <div class="panel-body">
+        <table class="table table-hover">
+            <tr>
+                <th>Parent</th>
+                <td>{{content.parent | ellipsis:130}}</td>
+            </tr>
+            <tr>
+                <th>Platform</th>
+                <td>{{content.platform | ellipsis:130}}</td>
+            </tr>
+            <tr>
+                <th>Platform version</th>
+                <td>{{content.platform_version | ellipsis:130}}</td>
+            </tr>
+            <tr>
+                <th>Platform description</th>
+                <td>{{content.platform_description | ellipsis:130}}</td>
+            </tr>
+            <tr>
+                <th>Browser</th>
+                <td>{{content.browser | ellipsis:130}}</td>
+            </tr>
+            <tr>
+                <th>Cookies</th>
+                <td>{{content.cookies | ellipsis:130}}</td>
+            </tr>
+            <tr>
+                <th>Device Type</th>
+                <td>{{content.device_type | ellipsis:130}}</td>
+            </tr>
+            <tr>
+                <th>Is Fake?</th>
+                <td>{{content.isfake | ellipsis:130}}</td>
+            </tr>
+            <tr>
+                <th>Is Anonymized?</th>
+                <td>{{content.isanonymized | ellipsis:130}}</td>
+            </tr>
+            <tr>
+                <th>Is Modified?</th>
+                <td>{{content.ismodified | ellipsis:130}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="panel panel-danger" ng-if="!success">
+    <div class="panel-heading">
+        <strong>{{(artifact.data || artifact.attachment.name) | fang}}</strong>
+    </div>
+    <div class="panel-body">
+        {{content.errorMessage}}
+    </div>
+</div>
