@@ -5,6 +5,10 @@
     <div class="panel-body">
         <table class="table table-hover">
             <tr>
+                <th>Information on the website<a href='https://user-agents.net/'> user-agents.net</a></th>
+                <td><a href={{content.url}}>{{content.url | ellipsis:130}}</a></td>
+            </tr>
+            <tr>
                 <th>Parent</th>
                 <td>{{content.parent | ellipsis:130}}</td>
             </tr>
@@ -31,6 +35,10 @@
             <tr>
                 <th>Device Type</th>
                 <td>{{content.device_type | ellipsis:130}}</td>
+            </tr>
+            <tr>
+                <th>Is Crawler?</th>
+                <td>{{content.crawler | ellipsis:130}}</td>
             </tr>
             <tr>
                 <th>Is Fake?</th>
