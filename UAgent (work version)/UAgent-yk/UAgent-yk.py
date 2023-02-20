@@ -24,6 +24,23 @@ class UserAgentAnalyzer(Analyzer):
                     self.error('Unable to connect to user-agents.net\n')
                 try:
                     result = r.json()
+                    
+                    url2 = 'https://user-agents.net/string/'
+                    user_agent = user_agent.lower()
+                    user_agent_new = ''
+                    for i in range(len(user_agent)):
+                        if not user_agent[i].isdigit() and not user_agent[i].isalpha():
+                            user_agent_new += '-'
+                        else:
+                            user_agent_new += user_agent[i]
+                    url2 += user_agent_new.replace('--', '-')
+                    if url2[-1] == '-':
+                        url2 = url2[:-1]
+                    if '--' in url2:
+                        url2 = url2.replace('--', '-')
+
+                    result['url'] = url2
+                    
                     self.report(result)
                 except Exception:
                     self.error('Invalid input data')
