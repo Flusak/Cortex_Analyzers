@@ -28,11 +28,11 @@ class UserAgentAnalyzer(Analyzer):
                     url2 = 'https://user-agents.net/string/'
                     user_agent = user_agent.lower()
                     user_agent_new = ''
-                    for i in range(len(user_agent)):
-                        if not user_agent[i].isdigit() and not user_agent[i].isalpha():
+                    for i in user_agent:
+                        if not i.isdigit() and not i.isalpha():
                             user_agent_new += '-'
                         else:
-                            user_agent_new += user_agent[i]
+                            user_agent_new += i
                     url2 += user_agent_new.replace('--', '-')
                     if url2[-1] == '-':
                         url2 = url2[:-1]
