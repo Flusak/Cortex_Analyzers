@@ -24,7 +24,7 @@ class UserAgentAnalyzer(Analyzer):
                     self.error('Unable to connect to user-agents.net\n')
                 try:
                     result = r.json()
-                    
+                    #URL
                     url2 = 'https://user-agents.net/string/'
                     user_agent = user_agent.lower()
                     user_agent_new = ''
